@@ -1,11 +1,8 @@
-#import <ExpoModulesCore/EXReactDelegateWrapper.h>
-#import <React_RCTAppDelegate/RCTAppDelegate.h>
+@interface AppDelegate : EXAppDelegateWrapper
 
-@interface AppDelegate : RCTAppDelegate <RCTTurboModuleManagerDelegate>
+- (UISceneConfiguration *)application:(UIApplication *)application
+    configurationForConnectingSceneSession:
+        (UISceneSession *)connectingSceneSession
+                                   options:(UISceneConnectionOptions *)options;
 
-@property (nonatomic, strong, readonly) EXReactDelegateWrapper *reactDelegate;
-@property (nonatomic, strong) UIView *rootView;
-
-- (BOOL)initAppFromScene:(UISceneConnectionOptions *)connectionOptions;
-
-- (void)finishedLaunchingWithOptions:(UISceneConnectionOptions *)connectionOptions;
+@property(nonatomic, strong) RCTBridge *bridge;

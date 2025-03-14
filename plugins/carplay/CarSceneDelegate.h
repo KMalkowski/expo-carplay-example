@@ -1,8 +1,6 @@
-#import <UIKit/UIKit.h>
 #import <CarPlay/CarPlay.h>
+#import <Foundation/Foundation.h>
 
 @interface CarSceneDelegate : UIResponder <CPTemplateApplicationSceneDelegate>
-
-@property (strong, nonatomic) UIWindow * window;
 
 @end
